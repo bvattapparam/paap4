@@ -1,0 +1,97 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-header">
+    <div class="row1">
+    <div class="col-sm-12">
+        <div class="col-sm-4 col-sm-offset-1">
+             <ul class="user-info-menu right-links list-inline list-unstyled notification-menu"> 
+                 <li dropdown>
+                    <a class="dropdown-toggle" dropdownToggle placement="top"><i class="fa fa-bell-o"></i> <span class="badge badge-danger">{{brLength}}</span> </a>
+                    <ul ng-if="brLength > 0" class="dropdown-menu navbar-setting notification-sub-menu" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                        <li icon="md md-blur-on">
+                            <span style="display: block; border-left: 1px solid #eee; position: absolute; top: -60px; left: -2px; height: 60px"></span>
+                        </li>
+                        <li icon="md md-blur-on">
+                            <div class="col-sm-4 no-l-pd no-r-pd notification-box" ng-include src="'dashboard/containers/notification.html'"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li dropdown>
+                    <a class="dropdown-toggle" dropdownToggle placement="top" ><i class="fa fa-tasks"></i> <span class="badge badge-info">9</span> </a>
+                    <ul class="dropdown-menu navbar-setting notification-sub-menu" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                        <li icon="md md-blur-on">
+                            <span style="display: block; border-left: 1px solid #eee; position: absolute; top: -60px; left: -2px; height: 60px"></span>
+                        </li>
+                        <li icon="md md-blur-on">
+                            <a href="#/dashboard" >
+                                <span>Mobile bill payment - husband</span></a>
+                        </li>
+                        <li icon="md md-blur-on">
+                            <a href="#/dashboard" >
+                                <span>Mobile bill payment - wife</span></a>
+                        </li>
+                        <li icon="md md-blur-on">
+                            <a href="#/dashboard" >
+                                <span>Net connection amount payment</span></a>
+                        </li>
+                    </ul>
+                </li>
+             </ul>
+        </div>
+
+        <div class="col-sm-4"></div>
+         <div class="col-sm-3 text-right">
+             <span [innerHTML]="fullname"></span>
+            <button md-icon-button [mdMenuTriggerFor]="menu" class="user-info-menu settings-menu">
+                <i class="fa fa-th"></i>
+            </button>
+                <md-menu #menu="mdMenu">
+                    <button md-menu-item>
+                        <i class="fa fa-key"></i>
+                        <span>{{ 'SETTINGS_DROPMENU_PASSWORD' | translate }}</span>
+                    </button>
+                    <div md-menu-item disabled>
+                        <i class="fa fa-cogs"></i>
+                        <span>{{ 'SETTINGS_DROPMENU_SETTINGS' | translate }}</span>
+                    </div>
+                    <div md-menu-item routerLink="/settings/langsetting">
+                        <i class="fa fa-language"></i>
+                        <span>{{ 'SETTINGS_DROPMENU_LANGUAGE' | translate }}</span>
+                        <!-- <button *ngFor="let lang of supportedLangs" (click)="selectLang(lang.value)" class="btn btn-xs" [class.btn-primary]="isCurrentLang(lang.value)">
+                            {{ lang.display }}
+                        </button> -->
+                    </div>
+                </md-menu>
+
+             <!-- <ul class="user-info-menu list-inline settings-menu"> 
+                 <li class="user-profile" ngbDropdown>
+                     <span ngbDropdownToggle class="btn-link-pointer"> 
+                        <img src="/assets/img/user2.png" alt="user-image" class="img-circle img-inline userpic-32" width="28"> 
+                        <span [innerHTML]="fullname"></span> &nbsp;<i class="fa fa-angle-down"></i>
+                    </span> 
+                    <ul ngbDropdownMenu class="dropdown-menu navbar-setting settings-sub-menu profile-settings" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                        <li icon="md md-blur-on">
+                        <img src='assets/img/user2.png' class="ll-image">
+                        </li>
+                        <li icon="md md-blur-on">
+                            <a href="#/dashboard" >
+                            <i class="fa fa-key"></i><span data-ng-bind-html="'menu.passkey-reset' | i18n"></span></a>
+                        </li>
+                        <li icon="md md-blur-on" href="#/dashboard">
+                            <a href="#/dashboard" >
+                            <i class="fa fa-close"></i><span data-ng-bind-html="'menu.logout' | i18n" ng-click="logout()"></span></a>
+                        </li>
+                        <li icon="md md-blur-on">
+                            <div class="btn-group col-sm-12 text-center">
+                                <button *ngFor="let lang of supportedLangs" (click)="selectLang(lang.value)" class="btn btn-xs" [class.btn-primary]="isCurrentLang(lang.value)">
+                                    {{ lang.display }}
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                 </li>
+             </ul> -->
+         </div>
+    </div>
+</div>
+</nav>
+
+

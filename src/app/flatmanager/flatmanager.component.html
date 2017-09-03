@@ -1,0 +1,28 @@
+<section>
+  <div class="row header-container">
+    <div class="col-sm-3">
+        <div>
+        <h1><i class="fa fa-building"></i><span [innerHTML] = '"FLAT_MANAGER_HEADER" | translate'></span></h1>
+      </div>  
+    </div>
+    <div class="col-sm-8" style="text-align:right">
+         <ol class="breadcrumb"> 
+          <li class="btn-link-pointer" routerLink="/dashboard"> <strong><i class="fa fa-home"></i>{{'BREADCRUM_DASHBOARD' | translate}}</strong> </li> 
+          <li class="active"> <strong><i class="fa fa-building"></i>{{'BREADCRUM_FLAT_MANAGER' | translate}}</strong> </li> 
+        </ol>  
+    </div>
+    <div class="col-sm-1 text-right">
+        <button type="button" class="btn btn-sm btn-primary">
+         <span class="fa fa-refresh fa-spin"></span>
+        </button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <app-dbpanelbox [panelIcon] = 'panelrecord.panelIcon' [panelTitle] = 'panelrecord.panelTitle' [panelAmount] = 'panelrecord.panelAmount' [panelLink] ='panelrecord.panelLink' *ngFor = 'let panelrecord of panelRecord'></app-dbpanelbox>
+  </div>
+</section>
+
+

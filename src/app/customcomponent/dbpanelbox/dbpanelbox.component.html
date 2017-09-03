@@ -1,0 +1,18 @@
+<div class="col-sm-3" style="margin-bottom:10px">
+  <div>
+    <div class="generic-sticker panel-main-sticker">
+      <div class="col-sm-2 no-l-pd p-t-xs">
+        <div class="col-sm-2 no-l-pd p-t-s panel-icon">
+      <img src="assets/img/{{panelIcon}}.png">
+        </div>
+      </div>
+      <div class="col-sm-10">
+        <h2><span>{{panelAmount | paapcurrency}}</span></h2>
+        <span>{{panelTitle}}</span>
+      </div>
+       <div class="col-lg-12" style="background-color:#eee" *ngIf="panelLink">
+        <span class="small btn-link-pointer"><a routerLink="{{panelLink}}">Click here</a></span>
+      </div>
+    </div>
+  </div>
+</div>

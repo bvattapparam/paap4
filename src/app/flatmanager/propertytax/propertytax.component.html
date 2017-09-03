@@ -1,0 +1,24 @@
+<section>
+  <div class="row header-container">
+    <div class="col-sm-3">
+        <div>
+        <h1><i class="fa fa-building"></i><span [innerHTML] = '"PROPERTYTAX_HEADER" | translate'></span></h1>
+      </div>  
+    </div>
+    <div class="col-sm-8" style="text-align:right">
+         <ol class="breadcrumb"> 
+          <li class="btn-link-pointer" routerLink="/dashboard"> <i class="fa fa-home"></i>{{'BREADCRUM_DASHBOARD' | translate}} </li> 
+          <li class="btn-link-pointer" routerLink="/flatmanager"><i class="fa fa-building"></i>{{'BREADCRUM_FLAT_MANAGER' | translate}} </li> 
+          <li class="active"><i class="fa fa-building"></i>{{'BREADCRUM_PROPERTYTAX' | translate}} </li> 
+        </ol>  
+    </div>
+    <div class="col-sm-1 text-right">
+        <button type="button" class="btn btn-sm btn-primary">
+         <span class="fa fa-refresh fa-spin"></span>
+        </button>
+    </div>
+  </div>
+</section>
+
+
+

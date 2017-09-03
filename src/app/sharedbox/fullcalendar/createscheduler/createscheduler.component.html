@@ -1,0 +1,64 @@
+<div class="modal-header">
+  <h2 md-dialog-title>{{ data.title}}</h2>
+</div>
+<div class="modal-body" [formGroup]="createScheduler">
+  <md-dialog-content>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+          <div class="input-group">
+            <md-input-container class='example-full-width'>
+              <input mdInput formControlName="title" placeholder="{{'SCHEDULER.CREATE.TITLE' | translate}}">
+            </md-input-container>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+          <md-input-container class='example-full-width'>
+            <input mdInput formControlName ="color" placeholder="{{'SCHEDULER.CREATE.COLOR' | translate}}">
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+          <div class="input-group">
+            <md-input-container>
+              <input mdInput [mdDatepicker]="start" formControlName = "start" placeholder="{{'SCHEDULER.CREATE.START' | translate}}">
+              <button mdSuffix [mdDatepickerToggle]="start"></button>
+            </md-input-container>
+            <md-datepicker #start></md-datepicker>
+          </div>
+        </div>
+      </div>
+       <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+          <md-input-container>
+            <input mdInput [mdDatepicker]="end" formControlName ="end" placeholder="{{'SCHEDULER.CREATE.END' | translate}}">
+            <button mdSuffix [mdDatepickerToggle]="end"></button>
+          </md-input-container>
+          <md-datepicker #end></md-datepicker>
+        </div>
+      </div> 
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+          <md-input-container class='example-full-width'>
+            <textarea mdInput formControlName ="description" placeholder="{{'SCHEDULER.CREATE.DESCRIPTION' | translate}}"></textarea>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+  </md-dialog-content>
+</div>
+<div class="modal-footer">
+  <md-dialog-actions>
+    <button md-button [md-dialog-close]="true">{{ 'BUTTON_CANCEL' | translate }}</button>
+    <button md-button (click) = "createSchedulerData()">{{ 'BUTTON_SAVE' | translate }}</button>
+  </md-dialog-actions>
+</div>

@@ -1,0 +1,31 @@
+<aside class="sidebar fixed">
+  <div class="logo-box">
+  <img src="assets/img/monkey.png">
+  <h1>Pa<span class="mirror-text">Pa</span></h1>
+  </div>
+  <ul class="menu-links" role="menu">
+    <li icon="md md-blur-on" routerLink="dashboard" [ngClass] ="getClass('/dashboard')" >
+      <a routerLink="dashboard">
+        <i class="fa fa-list"></i></a>
+    </li>
+    <li icon="md md-blur-on" routerLink="flatmanager" [ngClass]="getClass('/flatmanager')" >
+      <a routerLink="flatmanager"><i class="fa fa-building"></i></a>
+    </li>
+     <li icon="md md-blur-on" routerLink="carmanager" [ngClass]="getClass('/carmanager')" >
+      <a routerLink="carmanager"><i class="fa fa-car"></i></a>
+    </li>
+     <li icon="md md-blur-on" routerLink="loanmanager" [ngClass]="getClass('/loanmanager')">
+      <a routerLink="loanmanager"><i class="fa fa-bank"></i></a>
+    </li>
+     <li icon="md md-blur-on" routerLink="insurancemanager" [ngClass]="getClass('/insurancemanager')" >
+      <a routerLink="insurancemanager"><i class="fa fa-money"></i></a>
+    </li>
+     <li icon="md md-blur-on" routerLink="gasmanager" [ngClass]="getClass('/gasmanager')" >
+      <a routerLink="gasmanager"><i class="fa fa-plug"></i></a>
+    </li>
+    <li icon="md md-blur-on" routerLink="flatmanager/flatpayment" [ngClass]="getClass('/gasmanager')" >
+      <a routerLink="flatmanager/flatpayment"><i class="fa fa-plug"></i></a>
+    </li>
+  </ul>
+ 
+</aside>

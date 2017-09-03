@@ -1,0 +1,102 @@
+<section>
+  <div class="row header-container">
+    <div class="col-sm-3">
+      <div>
+        <h1><i class="fa fa-tachometer"></i><span [innerHTML] = '"DASHBOARD_HEADER" | translate'></span></h1>
+      </div>
+    </div>
+    <div class="col-sm-8" style="text-align:right">
+        <ol class="breadcrumb"> 
+          <li class="active"> <strong><i class="fa fa-home"></i>{{'BREADCRUM_DASHBOARD' | translate}}</strong> </li> 
+        </ol> 
+    </div>
+    <div class="col-sm-1 text-right">
+        <button type="button" class="btn btn-sm btn-primary">
+         <span class="fa fa-refresh fa-spin"></span>
+        </button>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="row">
+  <app-dbpanelbox [panelIcon] = 'panelrecord.panelIcon' [panelTitle] = 'panelrecord.panelTitle' [panelAmount] = 'panelrecord.panelAmount' *ngFor = 'let panelrecord of panelRecord'></app-dbpanelbox>
+</div>
+</section>
+ 
+<section class="p-t-none" style="margin-top:20px">
+  <div class="row">
+    <div class="col-sm-6"> 
+      <app-dbcard [dbCardValue] = 'dbCardValuePM' [dbCardTitle] = 'pmTitle' [dbCardIcon] = 'pmIcon'></app-dbcard>
+     
+    </div>
+    <div class="col-sm-6">
+       <app-dbcard [dbCardValue] = 'dbCardValueFM' [dbCardTitle] = 'fmTitle' [dbCardIcon] = 'fmIcon'></app-dbcard>
+      <!-- <div class="generic-container">
+        <h2 class="text-uppercase"><img src="assets/img/flat.png" style="height:30px">&nbsp;<span>Flat Manager</span></h2>
+        <div class="table-responsive white md-tbl-view" style="margin-top:20px">
+            <div class="table-responsive white md-tbl-view">
+              <table class="clear-both table table-hover table-full table-full-small">
+                <thead>
+                  <tr>
+                    <th >Description</th>
+                    <th>Paid Till</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td style="min-width:200px"><img src="assets/img/tax.png" height=20>&nbsp;Property Tax</td><td>25000</td><td></td></tr>
+                  <tr><td><img src="assets/img/eb.png" height=20>&nbsp; TNEB</td><td>1500</td><td></td></tr>
+                  <tr><td><img src="assets/img/maint.png" height=20>&nbsp; Maintenance</td><td>100</td><td></td></tr>
+                  <tr><td><img src="assets/img/pipe.png" height=20>&nbsp; Water Bill</td><td>2220</td><td></td></tr>
+                   <tr><td><img src="assets/img/gas.png" height=20>&nbsp; Gas Bill</td><td>2220</td><td></td></tr>
+                </tbody>
+              </table>
+            </div> 
+        </div> 
+      </div> -->
+    </div>
+
+  </div>
+</section> 
+
+<section class="p-t-none" style="margin-top:20px">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="generic-container">
+        <h2 class="text-uppercase"><img src="assets/img/scheduler.png" style="height:30px">&nbsp;<span>Appointment / Reminder</span></h2>
+        <div class="table-responsive white md-tbl-view" style="margin-top:20px">
+          <app-fullcalendar></app-fullcalendar>
+        </div> 
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12">
+           <app-dbcard [dbCardValue] = 'dbCardValueCM' [dbCardTitle] = 'cmTitle' [dbCardIcon] = 'cmIcon'></app-dbcard>
+        </div>
+        
+        <div class="col-sm-12" style="margin-top:30px">
+          <div class="generic-container" style="min-height:208px">
+            <h2 class="text-uppercase"><img src="assets/img/maint.png" style="height:30px">&nbsp;<span>Annual Maintenance Card</span></h2>
+            <div class="table-responsive white md-tbl-view" style="margin-top:20px">
+             <div class="col-sm-2 text-center"><img src="assets/img/fridge.png" height="50">Fridge</div>
+             <div class="col-sm-2 text-center"><img src="assets/img/oven.png" height="50">Microwave</div>
+             <div class="col-sm-2 text-center"><img src="assets/img/washing.png" height="50">Laundry</div>
+             <div class="col-sm-2 text-center"><img src="assets/img/ac.png" height="50"> Aircondition</div>
+             <div class="col-sm-2 text-center"><img src="assets/img/waterbottle.png" height="50">Purifier</div>
+              <div class="col-sm-2 text-center"><img src="assets/img/waterbottle.png" height="50">AO Smith</div>
+            </div> 
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section> 
+
+
+
+
+

@@ -1,0 +1,22 @@
+<div class="generic-container">
+  <h2 class="text-uppercase"><img src="assets/img/{{dbCardIcon}}.png" style="height:30px">&nbsp;<span>{{dbCardTitle}}</span></h2>
+  <div class="table-responsive white md-tbl-view" style="margin-top:20px">
+      <div class="table-responsive white md-tbl-view">
+        <table class="clear-both table table-hover table-full table-full-small">
+          <thead>
+            <tr>
+              <th >Description</th>
+              <th >Paid Till</th>
+              <th ></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let dbcard of dbCardValue">
+              <td style="min-width:200px"><img src="assets/img/{{dbcard.dbCardIcon}}.png" height=20>&nbsp; {{dbcard.dbCardDescription}}</td>
+              <td>{{dbcard.dbCardAmount | paapcurrency}}</td><td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+  </div> 
+</div>

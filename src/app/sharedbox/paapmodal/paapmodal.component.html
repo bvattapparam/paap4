@@ -1,0 +1,12 @@
+    <div class="modal-header">
+      <h2 md-dialog-title>{{ data.errorTitle }}</h2>
+    </div>
+    <div class="modal-body">
+      <md-dialog-content>{{data. errorDescription }}</md-dialog-content>
+    </div>
+    <div class="modal-footer">
+      <md-dialog-actions>
+        <button md-button [md-dialog-close]="true">{{ 'BUTTON_CANCEL' | translate }}</button>
+         <button md-button md-dialog-save>{{ 'BUTTON_SAVE' | translate }}</button>
+      </md-dialog-actions>
+    </div>

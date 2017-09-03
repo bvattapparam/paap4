@@ -1,0 +1,87 @@
+<section>
+  <div class="row header-container">
+    <div class="col-sm-3">
+        <div>
+        <h1><i class="fa fa-building"></i><span [innerHTML] = '"FLAT_PAYMENT_HEADER" | translate'></span></h1>
+      </div>  
+    </div>
+    <div class="col-sm-8" style="text-align:right">
+         <ol class="breadcrumb"> 
+          <li class="btn-link-pointer" routerLink="/dashboard"> <i class="fa fa-home"></i>{{'BREADCRUM_DASHBOARD' | translate}} </li> 
+          <li class="btn-link-pointer" routerLink="/flatmanager"><i class="fa fa-building"></i>{{'BREADCRUM_FLAT_MANAGER' | translate}} </li> 
+          <li class="active"><i class="fa fa-building"></i>{{'BREADCRUM_FLAT_PAYMENT' | translate}} </li> 
+        </ol>  
+    </div>
+    <div class="col-sm-1 text-right">
+        <button type="button" class="btn btn-sm btn-primary">
+         <span class="fa fa-refresh fa-spin"></span>
+        </button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div id="dashboard" class="generic-container">
+    <div class="generic-card no-margin">
+      <div class="table-responsive white">
+        <div class="actions pull-right">
+          <div class="button-row">
+            <button md-mini-fab color="primary"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+        <h4 class="table-title"> {{'TBL_HEADER_TOTAL_AMOUNT' | translate}} {{_grandTotal | paapcurrency}} | {{'TBL_HEADER_TOTAL_RECORDS' | translate}} {{_totalRows}}</h4>
+          <table class="clear-both table table-hover table-full table-full-small">
+            <colgroup>
+              <col class="auto-cell-size">
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>{{'LABEL.PAIDDATE' | translate}}</th>
+                <th>{{'LABEL.MODE' | translate}}</th>
+                <th>{{'LABEL.CHEQUENO' | translate}}</th>
+                <th>{{'LABEL.DDNO' | translate}}</th>
+                <th>{{'LABEL.WIRENO' | translate}}</th>
+                <th>{{'LABEL.MCHNO' | translate}}</th>
+                <th>{{'LABEL.PURPOSE' | translate}}</th>
+                <th>{{'LABEL.RECEIPT' | translate}}</th>
+                <th>{{'LABEL.AMOUNT' | translate}}</th>
+                <th>{{'LABEL.CONTACTPERSON' | translate}}</th>
+                <th>{{'LABEL.ACTION' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let rel of _getFlatPaymentObj.item" > 
+              
+                <td></td>
+                <td >{{rel.PAID_DATE | date }}</td>
+                 <td >{{rel.MODE}}</td>
+                <td >{{rel.CHEQUE_NUMBER}}</td>
+                <td >{{rel.DD_NUMBER}}</td>
+                <td >{{rel.WIRETRANSFER_ID}}</td>
+                <td >{{rel.MCH_NUMBERDE}}</td>
+                <td >{{rel.PURPOSE}}</td>
+                <td >{{rel.RECEIPT_NUMBER}}</td>
+                <td >{{rel.AMOUNT | paapcurrency}}</td>
+                <td >{{rel.CONTACT_PERSON | uppercase}}</td>
+                <td class="f20 ng-binding action comment-content">
+                  <!-- <i class="action-icon-small-primary fa fa-info close-pop" tooltip="{{'tooltip.comment' | i18n}}" popover-template="'common/popover/common.popover.html'" data-ng-model="rel" popover-placement="left"></i>
+                  <i class="action-icon-small-primary fa fa-edit" tooltip="{{'tooltip.edit' | i18n}}" ng-click="editFlatBasicPayment(rel)"></i>
+                  <i class="action-icon-small-primary fa fa-trash" tooltip="{{'tooltip.trash' | i18n}}" ng-click="showInfoBox('Info', 'generalinfoone', 'sm')"></i> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
